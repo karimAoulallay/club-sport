@@ -1,0 +1,211 @@
+:root {
+    --card-color: rgb(248, 248, 248);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+}
+
+/*----------------------- Hero section -----------------------*/
+
+#hero {
+    min-height: calc(100vh - 75px);
+
+    background-image: linear-gradient(rgba(0, 0, 0), transparent),
+        url(/assets/hero-mobile-1.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent),
+            url(/assets/hero-desktop-1.jpg);
+    }
+}
+
+#hero h1 {
+    margin-bottom: 2rem;
+}
+
+#hero p {
+    margin-bottom: 2rem;
+}
+
+#hero #register-btn {
+    transition: scale 0.3s;
+    -webkit-transition: scale 0.3s;
+    -moz-transition: scale 0.3s;
+    -ms-transition: scale 0.3s;
+    -o-transition: scale 0.3s;
+}
+
+#hero #register-btn:hover {
+    scale: 1.1;
+    box-shadow: 0 0 1rem rgba(255, 255, 0, 0.432);
+}
+
+#hero #socials {
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+#hero #socials a {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+#hero #socials a:hover {
+    opacity: 0.8;
+    translate: 0 -2px;
+}
+
+@media (min-width: 768px) {
+    #hero #socials {
+        margin-top: 0;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+}
+
+/*----------------------- Features section -----------------------*/
+
+#features img {
+    height: 16rem;
+    object-fit: cover;
+    transition: scale 0.3s;
+    -webkit-transition: scale 0.3s;
+    -moz-transition: scale 0.3s;
+    -ms-transition: scale 0.3s;
+    -o-transition: scale 0.3s;
+}
+
+#features .card:hover img {
+    scale: 1.2;
+}
+
+/* ----------------------- Form Component -----------------------*/
+
+.form-card {
+    max-width: 492px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    background-color: var(--card-color);
+}
+
+/*----------------------- Activities Page -----------------------*/
+
+.page_cover {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        rgba(0, 0, 0, 2)
+    );
+}
+
+.page_cover img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    isolation: isolate;
+}
+
+.page_cover h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page_cover p {
+    max-width: 400px;
+    letter-spacing: 1px;
+}
+
+@media (width >= 576px) {
+    .page_cover h1 {
+        font-size: 3.5rem;
+    }
+
+    .page_cover p {
+        max-width: 750px;
+        font-size: 1.2rem;
+    }
+}
+
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 3rem;
+}
+
+.activity-item .img {
+    max-width: min(100%, 350px);
+    display: block;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    flex: 1;
+}
+
+.activity-item .body {
+    max-width: 350px;
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .activity-item {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .activity-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+/*----------------------- Register Page -----------------------*/
+
+.plans {
+    padding: 0;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+/*----------------------- Dashboard -----------------------*/
+
+.dashboard-resume {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.dashboard-resume > div {
+    box-shadow: 0 0 1rem rgb(218, 218, 218);
+}
