@@ -12,7 +12,7 @@ class AdminController extends Controller
     {
 
         return view('admin.index', [
-            'users' => User::latest()->where('id', '!=', 1)->limit(3)->get(),
+            'users' => User::latest()->where('is_admin', '!=', 1)->limit(3)->get(),
             'plans' => Plan::all(),
             'members' => User::all(),
             'activities' => Activity::all(),

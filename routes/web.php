@@ -19,13 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('Layout');
-// });
 
 Route::get('/', [StaticController::class, 'index']);
 Route::get('/activities', [StaticController::class, 'activities']);
-// Route::get('/about', [StaticController::class, 'about']);
+Route::get('/about', [StaticController::class, 'about']);
 Route::get('/plans', [StaticController::class, 'plans']);
 
 // Show register form

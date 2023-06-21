@@ -1,19 +1,24 @@
 @extends('layout')
 
 @section('content')
+    <div class="container-fluid bg-light border-bottom border-dark">
+        <div class="container">
+            <div class="profile-header">
+                PROFILE
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <x-form-card>
-            <div class="border-bottom border-3 d-flex justify-content-between align-items-center px-3 pb-3 mb-3">
-                <h1 class="h3 fw-bold roboto-slab">Profile</h1>
-                <a href="/users/{{ $user->id }}/edit" class="btn btn-primary">Edit Profile</a>
-            </div>
-            {{-- Profile with a edit button --}}
-            <div>
+        <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-4">
+            <div class="position-relative" style="height: fit-content">
                 <img src="{{ $user->profile_image ? asset('/storage/' . $user->profile_image) : asset('assets/no-image.jpg') }}"
-                    alt="profile image" class="img-thumbnail"
+                    alt="profile image" class="img-thumbnail rounded-circle"
                     style="width: 200px; height: 200px; object-fit: cover; object-position: center" />
+                <a href="/users/{{ $user->id }}/edit"
+                    class="btn btn-primary position-absolute top-100 start-50 translate-middle"
+                    style="width: max-content">Edit Profile</a>
             </div>
-            <table class="table caption-top text-start mt-3">
+            <table class="table profile-table caption-top text-start ms-md-5 mt-5 mt-md-0">
                 <tbody>
                     <tr>
                         <th scope="row">First Name</th>
@@ -33,7 +38,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Gender</th>
-                        <td>{{ $user->gender }}</td>
+                        <td>{{ ucfirst($user->gender) }}</td>
                     </tr>
                     <tr>
                         <th scope="row">Joined Date</th>
@@ -46,7 +51,6 @@
                                 <div class="card border-dark">
                                     <div class="card-header d-flex justify-content-between">
                                         <label>{{ $plan->name }}</label>
-                                        {{-- <input type="radio" id="{{ $plan->id }}" name="plan_id" value="{{ $plan->id }}"> --}}
                                     </div>
                                     <div class="card-body">
                                         <p class="card-title">
@@ -63,6 +67,6 @@
                     @endunless
                 </tbody>
             </table>
-        </x-form-card>
+        </div>
     </div>
 @endsection

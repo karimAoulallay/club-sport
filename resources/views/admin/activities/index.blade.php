@@ -3,7 +3,8 @@
 @section('content')
     {{-- <div class="container"> --}}
     <div class="container">
-        <x-wrapper class="mt-5">
+        <h1 class="text-primary roboto-slab bg-white my-5 p-3 rounded shadow-sm">Activities</h1>
+        <x-wrapper class="mt-5 bg-white mb-5">
             <div class="border-bottom border-3 d-flex justify-content-between align-items-center px-3 pb-3">
                 <h1 class="h3 fw-bold roboto-slab">All Activities</h1>
                 <a href="/admin/dashboard/activities/create" class="btn btn-success fw-bold">Create Activity</a>

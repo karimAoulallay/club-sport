@@ -43,26 +43,42 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center gap-3">
-                        <li class="nav-item">
-                            <a href="/about" class="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/activities" class="nav-link">
-                                Activities
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/plans" class="nav-link">
-                                Plans
-                            </a>
-                        </li>
-                        {{-- <li class="nav-item">
-                            <a href="/membership" class="nav-link">
-                                Membership
-                            </a>
-                        </li> --}}
+                        @guest
+                            <li class="nav-item">
+                                <a href="/about" class="nav-link">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/activities" class="nav-link">
+                                    Activities
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/plans" class="nav-link">
+                                    Plans
+                                </a>
+                            </li>
+                        @endguest
+                        @auth
+                            @if (auth()->user()->is_admin)
+                                <li class="nav-item">
+                                    <a href="/about" class="nav-link">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/activities" class="nav-link">
+                                        Activities
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/plans" class="nav-link">
+                                        Plans
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
                         <span style="flex-basis: 1px; padding: 1px; background-color: white; border-radius: 1rem">
                         </span>
                         @auth

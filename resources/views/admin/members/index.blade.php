@@ -3,14 +3,9 @@
 @section('content')
     {{-- <div class="container"> --}}
     <div class="container">
-
-
-        <div class="container">
-            {{-- <div class="py-3 d-flex justify-content-between">
-                <h2 class="h4">Last members</h2>
-                <a href="admin/members" class="btn btn-primary">View All</a>
-            </div> --}}
-            <table class="table bg-light mt-5">
+        <h1 class="text-primary roboto-slab bg-white my-5 p-3 rounded shadow-sm">Members</h1>
+        <div class="container bg-white rounded shadow-sm">
+            <table class="table mt-5">
                 <thead>
                     <tr>
                         <th scope="col">Profile</th>
@@ -49,5 +44,4 @@
                 {{ $users->links() }}
             </div>
         </div>
-        {{-- </div> --}}
     @endsection

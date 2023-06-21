@@ -2,12 +2,13 @@
 
 @section('content')
     <div class="container">
-        <x-wrapper class="mt-5">
+        <h1 class="text-primary roboto-slab bg-white my-5 p-3 rounded shadow-sm">Plans</h1>
+        <x-wrapper class="mt-5 bg-white">
             <div class="border-bottom border-3 d-flex justify-content-between align-items-center px-3 pb-3">
                 <h1 class="h3 fw-bold roboto-slab">All Plans</h1>
                 <a href="/admin/dashboard/plans/create" class="btn btn-success fw-bold">Create Plan</a>
             </div>
-            <table class="table bg-light mt-5">
+            <table class="table mt-5">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
