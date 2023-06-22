@@ -32,7 +32,7 @@
     <header class="dashboard-header bg-dark">
         <div class="container">
             <nav class="navbar navbar-dark bg-dark navbar-expand-md text-center">
-                <a class="navbar-brand text-light bg-primary px-3 rounded" href="/">
+                <a class="navbar-brand btn btn-primary px-3 rounded" href="/">
                     <i class="fa-solid fa-house"></i>
                     <span class="ms-2">Home</span>
                 </a>

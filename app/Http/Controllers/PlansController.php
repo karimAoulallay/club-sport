@@ -31,7 +31,7 @@ class PlansController extends Controller
         ]);
 
         Plan::create($formFields);
-        return redirect()->back();
+        return redirect("admin/dashboard/plans");
     }
 
     public function destroy(Plan $plan)
